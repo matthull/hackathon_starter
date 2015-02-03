@@ -1,0 +1,28 @@
+tmp/*
+log/*
+/.bundle
+.rvmrc
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+config/database.yml
+config/settings/defaults.yml
+config/deploy/preview.rb
+.DS_Store
+public/uploads/
+public/projects/
+public/external_reviews/
+public/internal_reviews/
+public/users/
+public/documents/
+public/default_fonts/
+public/organizations/
+private/live_tile.zip
+.tags
+.gemtags
+coverage
+db/structure.sql

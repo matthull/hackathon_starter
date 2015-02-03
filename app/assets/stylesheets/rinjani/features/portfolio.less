@@ -1,0 +1,416 @@
+/* ##### Portfolio ##### */
+
+.filter-portfolio {
+    ul {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        
+        > li {
+            display: inline-block;
+            margin: 0px 3px 10px 3px;
+        }
+        
+        > li.active {
+            > a {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.popup-portfolio {
+    margin: 0 auto;
+    
+    .portfolio-item {
+        width: 270px;
+    
+        @media(min-width:600px) {
+            width: 320px;
+        }
+        
+        @media(min-width:992px) {
+            width: 273px;
+        }
+    }
+}
+
+.popup-portfolio.two-columns {
+    .portfolio-item {
+        @media(min-width:1024px) {
+            width: 562px;
+        }
+    }
+}
+
+.popup-portfolio.three-columns {
+    .portfolio-item {
+        @media(min-width:1024px) {
+            width: 370px;
+        }
+    }
+}
+
+.portfolio-item {
+    margin-bottom: 15px;
+
+    > .inner-content {
+        position: relative;
+        display: block;
+        overflow: hidden;
+
+        &:hover {
+            cursor: pointer;
+
+            > .portfolio-content {
+                display: block;
+            }
+        }
+
+        > .portfolio-content {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+            background-color: #000;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=70)";
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+
+            > .portfolio-detail {
+                width: 100%;
+                height: 100%;
+                
+                a {
+                    text-align: center;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    
+                    > .portfolio-text {
+                        display: table-cell;
+                        vertical-align: middle;
+                        padding: 0 15px;
+                        color: #fff;
+                        letter-spacing: 0.2em;
+
+                        h4 {
+                            text-transform: uppercase;
+                            font-size: 20px;
+                            font-weight: 300;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            font-weight: 300;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+
+        > img {
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+    }
+}
+
+
+/* ##### Portfolio Grow Effect ##### */
+
+.portfolio-item.grow {
+    > .inner-content {
+        &:hover {
+            > img {
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+
+/* ##### Portfolio Grow Rotate Effect ##### */
+
+.portfolio-item.grow-rotate {
+    > .inner-content {
+        &:hover {
+            > img {
+                -webkit-transform: scale(1.2) rotate(4deg);
+                transform: scale(1.2) rotate(4deg);
+            }
+        }
+    }
+}
+
+
+/* ##### Portfolio Shrink Effect ##### */
+
+.portfolio-item.shrink {
+    > .inner-content {
+        &:hover {
+            > img {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        > img {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+    }
+}
+
+
+/* ##### Portfolio Shrink Rotate Effect ##### */
+
+.portfolio-item.shrink-rotate {
+    > .inner-content {
+        &:hover {
+            > img {
+                -webkit-transform: scale(1.1) rotate(4deg);
+                transform: scale(1.1) rotate(4deg);
+            }
+        }
+
+        > img {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+    }
+}
+
+
+/* ##### Portfolio Slide In Left Effect ##### */
+
+.portfolio-item.slide-in-left {
+    > .inner-content {
+        &:hover {
+            > .portfolio-content {
+                -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+            }
+        }
+
+        > .portfolio-content {
+            display: block;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+        }
+    }
+}
+
+
+/* ##### Portfolio Pop Effect ##### */
+
+.portfolio-item.pop {
+    > .inner-content {
+        &:hover {
+            > img {
+                -webkit-animation-name: pop;
+                animation-name: pop;
+                -webkit-animation-duration: 0.4s;
+                animation-duration: 0.4s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+            }
+        }
+
+        > img {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+    }
+}
+
+@-webkit-keyframes pop {
+    50% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pop {
+    50% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+/* ##### Portfolio Pop Rotate Effect ##### */
+
+.portfolio-item.pop-rotate {
+    > .inner-content {
+        &:hover {
+            > img {
+                -webkit-animation-name: pop-rotate;
+                animation-name: pop-rotate;
+                -webkit-animation-duration: 0.4s;
+                animation-duration: 0.4s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+            }
+        }
+
+        > img {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+    }
+}
+
+@-webkit-keyframes pop-rotate {
+    50% {
+        -webkit-transform: scale(1.3) rotate(4deg);
+        transform: scale(1.3) rotate(4deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pop-rotate {
+    50% {
+        -webkit-transform: scale(1.3) rotate(4deg);
+        transform: scale(1.3) rotate(4deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+/* ##### Portfolio Push Effect ##### */
+
+.portfolio-item.push {
+    > .inner-content {
+        &:hover {
+            > img {
+                -webkit-animation-name: push;
+                animation-name: push;
+                -webkit-animation-duration: 0.4s;
+                animation-duration: 0.4s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+            }
+        }
+
+        > img {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+    }
+}
+
+@-webkit-keyframes push {
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+}
+
+@keyframes push {
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+}
+
+
+/* ##### Portfolio Push Rotate Effect ##### */
+
+.portfolio-item.push-rotate {
+    > .inner-content {
+        &:hover {
+            > img {
+                -webkit-animation-name: push-rotate;
+                animation-name: push-rotate;
+                -webkit-animation-duration: 0.4s;
+                animation-duration: 0.4s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+            }
+        }
+
+        > img {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+    }
+}
+
+@-webkit-keyframes push-rotate {
+    50% {
+        -webkit-transform: scale(1.1) rotate(4deg);
+        transform: scale(1.1) rotate(4deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+}
+
+@keyframes push-rotate {
+    50% {
+        -webkit-transform: scale(1.1) rotate(4deg);
+        transform: scale(1.1) rotate(4deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+}

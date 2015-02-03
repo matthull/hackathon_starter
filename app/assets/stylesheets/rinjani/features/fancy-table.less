@@ -1,0 +1,109 @@
+/* ##### Fancy Table ##### */
+
+@import "../variables";
+
+@base-color: @green;
+
+.table.table-custom {
+    > caption {
+        color: #111;
+        font-weight: 700;
+        padding-bottom: 2px;
+    }
+
+    > thead {
+        > tr {
+            > th {
+                color: #fff;
+            }
+        }
+    }
+
+    > tbody {
+        > tr {
+            > td {
+                background-color: #f2f2f4;
+                color: darken(#f2f2f4, 80%);
+                border-top: 1px solid darken(#f2f2f4, 10%);
+            }
+        }
+    }
+}
+
+.table.table-striped.table-custom {
+    > tbody {
+        > tr {
+            > td {
+                background-color: #f2f2f4;
+            }
+
+            &:nth-child(even) {
+                > td {
+                    background-color: lighten(#f2f2f4, 2%);
+                }
+            }
+        }
+    }
+}
+
+.table.table-hover.table-custom {
+    > tbody {
+        > tr {
+            &:hover {
+                > td {
+                    background-color: darken(#f2f2f4, 5%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.table.table-bordered.table-custom {
+    border-bottom: none;
+
+    > tbody {
+        > tr {
+            > td {
+                border: 1px solid darken(#f2f2f4, 10%);
+            }
+        }
+    }
+}
+
+
+/* ##### Mixin for generating new styles ##### */
+
+.table-variant(@bgcolor) {
+    border-bottom: 2px solid @bgcolor;
+
+    > thead {
+        background-color: @bgcolor;
+    
+        > tr {
+            > th {
+                border-bottom: 2px solid darken(@bgcolor, 5%);
+            }
+        }
+    }
+}
+
+.table-bordered-variant(@bgcolor) {
+    border-bottom: none;
+
+    > thead {
+        > tr {
+            > th {
+                border: 1px solid lighten(@bgcolor, 8%);
+            }
+        }
+    }
+}
+
+.table.table-custom { 
+    .table-variant(@base-color); 
+}
+
+.table.table-bordered.table-custom { 
+    .table-bordered-variant(@base-color); 
+}

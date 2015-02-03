@@ -1,0 +1,150 @@
+/* ##### Content Boxes ##### */
+
+@import "../variables";
+
+.content-box {
+    text-align: center;
+
+    @media(min-width:1023px) {
+        text-align: center;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        > .content-box-icon {
+            > i {
+                color: #222;
+            }
+        }
+    }
+
+    > .content-box-icon {
+        > i {
+            padding-bottom: 15px;
+            color: @base-color;
+            font-size: 40px;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+
+            @media(min-width:1023px) {
+                float: left;
+                font-size: 30px;
+                padding-bottom: 0px;
+            }
+        }
+    }
+
+    > .content-box-text { 
+        @media(min-width:1023px) {
+            margin-left: 50px;
+        }
+
+        > h4 {
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 25px;
+            letter-spacing: 0.2em;
+        }
+
+        > p {
+            font-size: 18px;
+
+            @media(min-width:767px) {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.content-box.top-column {
+    padding-bottom: 40px;
+
+    @media(min-width:1023px) {
+        padding-bottom: 50px;
+    }
+}
+
+.content-box.bottom-column {
+    @media(min-width:767px) {
+        padding-bottom: 0px;
+    }
+}
+
+.content-box.bottom-column.not-right-column {
+    padding-bottom: 40px;
+
+    @media(min-width:767px) {
+        padding-bottom: 0px;
+    }
+}
+
+
+/* ##### Content Boxes Style One ##### */
+
+.content-box.style-one {
+    > .content-box-icon {
+        > i {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+
+/* ##### Content Boxes Style Two ##### */
+
+.content-box.style-two {
+    > .content-box-icon {
+        > i {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 3px;
+            background-color: @base-color;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+
+    &:hover {
+        > .content-box-icon {
+            > i {
+                background-color: #222;
+            }
+        }
+    }
+}
+
+
+/* ##### Content Boxes Style Three ##### */
+
+.content-box.style-three {
+    > .content-box-icon {
+        > i {
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            border-radius: 50%;
+            background-color: @base-color;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+
+    &:hover {
+        > .content-box-icon {
+            > i {
+                background-color: #222;
+            }
+        }
+    }
+}

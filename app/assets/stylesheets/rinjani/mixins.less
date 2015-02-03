@@ -1,0 +1,33 @@
+/* ##### Mixins ##### */
+
+/* ##### Button Custom ##### */
+
+.btn-custom(@bgcolor) {
+    background-color: @bgcolor;
+    color: #000;
+    border-color: lighten(@bgcolor, 5%);
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: darken(@bgcolor, 5%);
+    }
+}
+
+
+/* ##### Animation Delay ##### */
+
+.delay-priorities(@n, @i: 1) when (@i =< @n) {
+  .delayp@{i} {
+        animation-delay: ~".@{i}s";
+        -moz-animation-delay: ~".@{i}s";
+        -webkit-animation-delay: ~".@{i}s";
+        -o-animation-delay: ~".@{i}s";
+        transition-delay: ~".@{i}s";
+        -webkit-transition-delay: ~".@{i}s";
+        -moz-transition-delay: ~".@{i}s";
+        -o-transition-delay: ~".@{i}s";
+  }
+  .delay-priorities(@n, (@i + 1));
+}

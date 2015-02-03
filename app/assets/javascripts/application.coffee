@@ -1,0 +1,30 @@
+#= require jquery
+#= require jquery_ujs
+#= require twitter/bootstrap
+#= require turbolinks
+#= require analytics
+#
+#= require rinjani/plugins/detectmobilebrowser
+#= require rinjani/plugins/jquery-easing/jquery.easing.min
+#= require rinjani/plugins/jquery.sticky
+#= require rinjani/plugins/jquery-inview/jquery.inview.min
+#= require rinjani/plugins/jquery.countTo
+#= require rinjani/plugins/jquery-easypiechart/jquery.easypiechart.min
+#= require rinjani/plugins/jquery-countdown/jquery.countdown.min
+#= require rinjani/plugins/owl.carousel/owl-carousel/owl.carousel.min
+#= require rinjani/plugins/isotope/isotope.pkgd.min
+#= require rinjani/plugins/jquery-magnificPopup/jquery.magnific-popup.min 
+#= require rinjani/plugins/jquery-validation/jquery.validate.min
+
+#= require rinjani/rinjani
+#= require rinjani/animation
+#= require rinjani/charts
+#= require rinjani/content-boxes
+#= require rinjani/countdown
+#= require rinjani/counters
+#= require rinjani/funny-boxes
+#= require rinjani/meet-the-team
+#= require rinjani/portfolio
+#= require rinjani/pricing-tables
+#= require rinjani/testimonials
+#= require rinjani/timeline

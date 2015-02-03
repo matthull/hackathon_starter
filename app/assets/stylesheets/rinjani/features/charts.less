@@ -1,0 +1,52 @@
+/* ##### Charts ##### */
+
+@import "../variables";
+
+.chart-item {
+    > .chart-content {
+        margin: auto;
+        width: 210px;
+        min-height: 263px;
+
+        > .chart {
+            > .percent {
+                position: absolute;
+                height: 210px;
+                width: 210px;
+                line-height: 210px;
+                border-radius: 100%;
+                color: #fff;
+                font-size: 60px;
+                font-weight: 300;
+                letter-spacing: -3px;
+                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    .chart-text {
+        > h4 {
+            padding-top: 20px;
+            color: @base-color;
+            font-size: 25px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.chart-item.not-right-column.top-column {
+    padding-bottom: 40px;
+
+    @media(min-width:1023px) {
+        padding-bottom: 0px;
+    }
+}
+
+.chart-item.not-right-column {
+    padding-bottom: 40px;
+
+    @media(min-width:767px) {
+        padding-bottom: 0px;
+    }
+}

@@ -1,0 +1,433 @@
+/* ##### Core variables and mixins ##### */
+
+@import "variables";
+@import "mixins";
+
+//@base-color: @blue;
+//@base-color: @green;
+//@base-color: @red;
+//@base-color: @yellow;
+//@base-color: @pink;
+//@base-color: @purple;
+
+/* ##### General Class ##### */
+
+a.btn.btn-custom, 
+button.btn.btn-custom {
+    .btn-custom(@base-color);
+}
+
+
+/* ##### Navbar ##### */
+
+.navbar.rj-navbar {
+    .navbar-toggle {        
+        background-color: @base-color;
+    }
+
+    .navbar-nav {
+        > li {
+            > a {
+                &:hover {
+                    color: @base-color;
+                }
+            }
+        }
+
+        > li.active {
+            a, a:hover {
+                background-color: @base-color;
+
+                @media(min-width:767px) {
+                    background-color: @base-color;
+                }
+            }
+        }
+    }
+}
+
+.navbar-trigger-open {    
+    a {
+        background-color: @base-color;
+    }
+}
+
+
+/* ##### Sidebar ##### */
+
+#sidebar-wrapper {
+    > .sidebar-nav {
+        > li {
+            > a {
+                &:hover {
+                    background-color: @base-color;
+                }
+            }
+        }
+        
+        > li.sidebar-brand {
+            background-color: @base-color;
+        }
+    }
+}
+
+
+/* ##### Quote Section ##### */
+
+#rj-quote {
+    > .section-inner {
+        > .section-content {
+            .quote-text {
+                > .quote-icon {
+                    > i {
+                        color: @base-color;
+                    }
+                }
+                
+                > h2.quote-by {
+                    color: @base-color;
+                }
+            }
+        }
+    }
+}
+
+
+/* ##### Keep In Touch Section ##### */
+
+#rj-keep-in-touch {
+    .social-icon-item {
+        > a {
+            &:hover {
+                color: @base-color;
+            }
+        }
+    }
+}
+
+
+/* ##### Contact Us Section ##### */
+
+#rj-contact-us {
+    .form-group {
+        input, 
+        textarea {
+            border-left-color: @base-color;
+        }
+
+        span {
+            background-color: @base-color;
+            border-color: @base-color;
+        }
+    }
+
+    .social-icon-text {
+        > h2 {
+            background-color: @base-color;
+            border: 1px solid darken(@base-color, 10%);
+        }
+    }
+}
+
+
+/* ##### Features ##### */
+
+/* ##### Accordion ##### */
+
+.accordion {
+    .panel-group {
+        > .panel {
+            border-color: lighten(@base-color, 10%);
+            
+            > .panel-heading {
+                background-color: @base-color;
+                border-color: @base-color;
+            }
+
+            > .panel-collapse {
+                > .panel-body {
+                    border-color: lighten(@base-color, 10%);
+                }
+            }
+        }
+    }
+}
+
+
+/* ##### Charts ##### */
+
+.chart-item {
+    .chart-text {
+        > h4 {
+            color: @base-color;
+        }
+    }
+}
+
+
+/* ##### Content Boxes ##### */
+
+.content-box {
+    > .content-box-icon {
+        > i {
+            color: @base-color;
+        }
+    }
+}
+
+.content-box.style-two {
+    > .content-box-icon {
+        > i {
+            background-color: @base-color;
+        }
+    }
+}
+
+.content-box.style-three {
+    > .content-box-icon {
+        > i {
+            background-color: @base-color;
+        }
+    }
+}
+
+
+/* ##### Countdown ##### */
+
+.cd-content {
+    .cd-element {
+        border-bottom: 1px solid @base-color;
+        
+        > .cd-value {
+            color: @base-color;
+        }
+    }
+}
+
+
+/* ##### Counters ##### */
+
+.counter-item {
+    > i {
+        color: @base-color;
+    }
+
+    > p {
+        color: @base-color;
+    }
+}
+
+.counter-item.bubble {
+    .inner-content {
+        background-color: @base-color;
+
+        &:before {
+            border-top-color: @base-color;
+        }
+    }
+    
+    > p {
+        border-bottom: 1px solid @base-color;
+    }
+}
+
+
+/* ##### Error 404 Page ##### */
+
+.error404-text {
+    > h1 {
+        color: @base-color;
+    }
+}
+
+
+/* ##### Fancy Table ##### */
+
+.table.table-custom {
+    border-bottom: 2px solid @base-color;
+    
+    > thead {
+        background-color: #1ab394;
+    }
+}
+
+
+/* ##### Custom Font Awesome Icons ##### */
+
+.fa.icon-custom {
+    color: @base-color;
+    border: 1px solid @base-color;
+}
+
+.fa.icon-custom-inverse {
+    background-color: @base-color;
+}
+
+
+/* ##### Funny Boxes ##### */
+
+.funny-box {     
+    &:hover {
+        > .funny-box-icon {
+            background-color: @base-color;
+        }
+    }
+
+    > .funny-box-icon {
+        border: 1px solid @base-color;
+        color: @base-color;
+    }
+
+    > .funny-box-text {
+        > h4 {
+            &:after {
+                background-color: @base-color;
+            }
+        }
+    }
+}
+
+.funny-box.not-right-column {
+    padding-bottom: 40px;
+
+    @media(min-width:767px) {
+        padding-bottom: 0px;
+    }
+
+    &:before {
+        @media(min-width:1023px) {
+            background: -moz-linear-gradient(top, fade(@base-color, 0%) 0%, fade(@base-color, 90%) 15%, fade(@base-color, 90%) 85%, fade(@base-color, 0%) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, fade(@base-color, 0%)), color-stop(15%, fade(@base-color, 90%)), color-stop(85%, rgba(221,221,221,1)), color-stop(100%, fade(@base-color, 0%)));
+            background: -webkit-linear-gradient(top, fade(@base-color, 0%) 0%, fade(@base-color, 90%) 15%, fade(@base-color, 90%) 85%, fade(@base-color, 0%) 100%);
+            background: -o-linear-gradient(top, fade(@base-color, 0%) 0%, fade(@base-color, 90%) 15%, fade(@base-color, 90%) 85%, fade(@base-color, 0%) 100%);
+            background: -ms-linear-gradient(top, fade(@base-color, 0%) 0%, fade(@base-color, 90%) 15%, fade(@base-color, 90%) 85%, fade(@base-color, 0%) 100%);
+            background: linear-gradient(to bottom, fade(@base-color, 0%) 0%, fade(@base-color, 90%) 15%, fade(@base-color, 90%) 85%, fade(@base-color, 0%) 100%);
+        }            
+    }
+}
+
+.funny-box.outline-inward {
+    > .funny-box-icon {
+        &:before {
+            border: @base-color solid 4px;
+        }
+    }
+}
+
+
+/* ##### Funny Boxes Outline Outward Effect ##### */
+
+.funny-box.outline-outward {
+    > .funny-box-icon {
+        &:before {
+            border: @base-color solid 4px;
+        }
+    }
+}
+
+
+/* ##### Pricing Tables ##### */
+
+.pricing-table {
+    .pricing-wrapper {
+        > .pricing-column {
+            > .plan-title {
+                > h2 {
+                    background-color: @base-color;
+                }
+                
+                > .pricing-box {
+                    border-bottom: 3px solid @base-color;
+                }
+            }
+        }
+    }
+}
+
+.pricing-table.style-four {
+    .pricing-wrapper.features {
+        > .pricing-column {
+            > .item-list {
+                border-top: 3px solid @base-color;
+            }
+        }
+    }
+}
+
+.pricing-table.style-five {
+    .pricing-wrapper {
+        > .pricing-column {
+            border-top: 6px solid @base-color;
+
+            > .plan-footer {
+                background-color: @base-color;
+                border-right: 1px solid darken(@base-color, 2%);
+                border-bottom: 1px solid darken(@base-color, 2%);
+                border-left: 1px solid darken(@base-color, 2%);
+            }
+        }
+    }
+}
+
+.pricing-table.style-six {
+    .pricing-wrapper {
+        > .pricing-column {
+            border-top: 6px solid @base-color;
+
+            > .plan-footer {
+                background-color: @base-color;
+                border-right: 1px solid darken(@base-color, 2%);
+                border-bottom: 1px solid darken(@base-color, 2%);
+                border-left: 1px solid darken(@base-color, 2%);
+            }
+        }
+    }
+}
+
+
+/* ##### Tabular Content ##### */
+
+.tabular-content {
+    > ul.nav-tabs {
+        > li.active {
+            > a {
+                border-top: 5px solid @base-color;
+            }
+        }
+    }
+}
+
+
+/* ##### Testimonials ##### */
+
+.testimonial-item {
+    > .testimonial-content {
+        background: @base-color;
+
+        &:after {
+            border-top-color: @base-color;
+        }
+    }
+}
+
+
+/* ##### Timeline ##### */
+
+.timeline {
+    > li {
+        > .timeline-panel {
+            &:after {
+                @media(min-width:767px) {
+                    border-right: 0 solid @base-color;
+                    border-left: 14px solid @base-color;
+                }
+            }
+
+            > .timeline-heading {
+                > .timeline-title {
+                    background: @base-color;
+                }
+            }
+        }
+    }
+}

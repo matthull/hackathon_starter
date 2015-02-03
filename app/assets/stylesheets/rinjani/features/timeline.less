@@ -1,0 +1,163 @@
+/* ##### Timeline ##### */
+
+@import "../variables";
+
+.timeline {
+    position: relative;
+    padding: 20px 0 20px;
+    list-style: none;
+
+    &:before {
+        @media(min-width:767px) {
+            content: " ";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            margin-left: -1px;
+            background-color: darken(#eeeeee, 5%);
+        }
+    }
+
+    > li {
+        position: relative;
+        margin-bottom: 40px;
+        
+        @media(min-width:767px) {
+            margin-bottom: 20px;
+        }
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+        }
+
+        &:after {
+            clear: both;
+        }
+
+        > .timeline-panel {
+            position: relative;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid darken(#f2f4f4, 10%);
+            border-radius: 3px;
+            -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+            
+            @media(min-width:767px) {
+                float: left;
+                width: 44%;
+            }
+
+            &:before {
+                @media(min-width:767px) {
+                    content: " ";
+                    display: inline-block;
+                    position: absolute;
+                    top: 26px;
+                    right: -15px;
+                    border-top: 15px solid transparent;
+                    border-right: 0 solid darken(#f2f4f4, 10%);
+                    border-bottom: 15px solid transparent;
+                    border-left: 15px solid darken(#f2f4f4, 10%);
+                }
+            }
+
+            &:after {
+                @media(min-width:767px) {
+                    content: " ";
+                    display: inline-block;
+                    position: absolute;
+                    top: 27px;
+                    right: -14px;
+                    border-top: 14px solid transparent;
+                    border-right: 0 solid @base-color;
+                    border-bottom: 14px solid transparent;
+                    border-left: 14px solid @base-color;
+                }
+            }
+
+            > .timeline-heading {
+                > img {
+                    margin-bottom: 20px;
+                }
+
+                > .timeline-title {
+                    margin: 0;
+                    font-size: 28px;
+                    font-weight: 400;
+                    color: #fff;
+                    background: @base-color;
+                    padding: 20px;
+                }
+            }
+            
+            > .timeline-body {
+                > p {
+                    color: @text-color;
+                    font-size: 18px;
+                    padding: 0px 20px 10px 20px;
+                }
+            }
+        }
+
+        > .timeline-badge {
+            display: none;
+            
+            @media(min-width:767px) {
+                display: block;
+                z-index: 100;
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                width: 50px;
+                height: 50px;
+                margin-left: -25px;
+                border-radius: 50% 50% 50% 50%;
+                text-align: center;
+                font-size: 50px;
+                line-height: 50px;
+                color: #ccc;
+            }
+            
+            @media(min-width:992px) {
+                top: 0;
+                width: 80px;
+                height: 80px;
+                margin-left: -40px;
+                font-size: 80px;
+                line-height: 80px;
+            }
+        }
+    }
+
+    > li.timeline-inverted > .timeline-panel {
+        @media(min-width:767px) {
+            float: right;
+        }
+        &:before {
+            @media(min-width:767px) {
+                right: auto;
+                left: -15px;
+                border-right-width: 15px;
+                border-left-width: 0;
+            }
+        }
+
+        &:after {
+            @media(min-width:767px) {
+                right: auto;
+                left: -14px;
+                border-right-width: 14px;
+                border-left-width: 0;
+            }
+        }
+    }
+}

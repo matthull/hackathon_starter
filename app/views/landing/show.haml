@@ -1,0 +1,174 @@
+#rj-loader
+  .preload
+    = image_tag "rinjani/preloader.gif", alt: "Loading..."
+
+%nav#navigation.navbar.navbar-inverse.navbar-fixed-top.rj-navbar{:offset => "51", :role => "navigation"}
+  .container-fluid
+    / Navbar Header
+    .navbar-header.page-scroll
+      %button.navbar-toggle{"data-target" => ".navbar-rj-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "#page-top"} This Company
+    .collapse.navbar-collapse.navbar-rj-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li.page-scroll
+          %a{:href => "#rj-who-we-are"} FAQ
+        %li.page-scroll
+          %a{:href => "#rj-charts"} Blog
+        %li.page-scroll
+          %a{:href => "#rj-funny-boxes"} Sign In
+%section#rj-intro
+  .intro-body.text-center
+    .container
+      .row
+        .col-md-12
+          .logo
+            %h1
+          .intro-text.text-center
+            %h2 Main Header
+            %p.lead
+              Lead Line Goes Here
+          .page-scroll
+            %a.btn.btn-lg.btn-custom{:href => "#rj-who-we-are"} Get Started
+
+%section#rj-funny-boxes.section
+  .section-inner
+    .container.section-content
+      .row
+        .col-md-12
+          .section-title.text-center
+            %h3.main-title How does it work?
+            %span.section-line
+      .row
+        .col-sm-4.col-md-4
+          .funny-box.float-shadow.not-right-column.text-center
+            %span.funny-box-icon
+              %i.fa.fa-lightbulb-o 1
+            .funny-box-text
+              %h4 Heading
+              %p Details...
+        .col-sm-4.col-md-4
+          .funny-box.float-shadow.not-right-column.text-center
+            %span.funny-box-icon
+              %i.fa.fa-heart-o 2
+            .funny-box-text
+              %h4 Heading
+              %p Details...
+        .col-sm-4.col-md-4
+          .funny-box.float-shadow.text-center
+            %span.funny-box-icon
+              %i.fa.fa-flask 3
+            .funny-box-text
+              %h4 Heading
+              %p Details...
+
+%section#rj-why-us.section
+  .section-inner
+    .container.section-content.style-one
+      .row
+        .col-md-12
+          .section-title.text-center
+            %h3.main-title Benefits
+            %span.section-line
+      .row
+        .col-sm-4.col-md-4
+          .content-box.top-column.clearfix
+            %span.content-box-icon
+              %i.fa.fa-rocket
+            .content-box-text
+              %h4 Heading
+              %p Details...
+        .col-sm-4.col-md-4
+          .content-box.top-column.clearfix
+            %span.content-box-icon
+              %i.fa.fa-thumbs-o-up
+            .content-box-text
+              %h4 Heading
+              %p Details...
+        .col-sm-4.col-md-4
+          .content-box.top-column.clearfix
+            %span.content-box-icon
+              %i.fa.fa-star-o
+            .content-box-text
+              %h4 Heading
+              %p Details...
+
+%section#rj-why-us.section
+  .section-inner
+    .container.section-content
+      .row
+        .col-md-12
+          .section-title.text-center
+            %h3.main-title Details
+            %span.section-line
+      .row
+        .col-sm-4.col-md-4
+          .content-box.style-one.bottom-column.not-right-column.clearfix
+            %span.content-box-icon
+              %i.fa.fa-shield
+            .content-box-text
+              %h4 Heading
+              %p Details...
+        .col-sm-4.col-md-4
+          .content-box.style-one.bottom-column.not-right-column.clearfix
+            %span.content-box-icon
+              %i.fa.fa-send-o
+            .content-box-text
+              %h4 Heading
+              %p Details...
+        .col-sm-4.col-md-4
+          .content-box.style-one.bottom-column.clearfix
+            %span.content-box-icon
+              %i.fa.fa-support
+            .content-box-text
+              %h4 Heading 
+              %p Details...
+
+%section#rj-contact-us.section.section-bgtype-image
+  .section-inner
+    .bg-overlay
+    .container.section-content
+      .row
+        .col-md-12
+          .section-title.text-center
+            %h3.main-title This company is launching soon!
+            %h4.sub-title Tell us who your are, and we'll let you know when this site is ready.
+            %span.section-line
+        .col-md-12
+          .form-respond.text-center
+      .row
+        = form_for @client,
+          url: [@client], html: {id: 'contact-us-form', class: 'contact-us-form element-line validate contact-us-form'} do |f|
+          .col-md-5.col-md-offset-1
+            .form-group
+              = f.label :first_name, 'First Name*'
+              .input-group.input-group-lg
+                = f.text_field :first_name, class: 'form-control required', placeholder: 'Enter first name'
+            .form-group.form-group-bottom
+              = f.label :last_name, 'Last Name*'
+              .input-group.input-group-lg
+                = f.text_field :last_name, class: 'form-control required', placeholder: 'Enter last name'
+          .col-md-5
+            .form-group
+              = f.label :nickname, 'Nickname'
+              .input-group.input-group-lg
+                = f.text_field :nickname, class: 'form-control', placeholder: 'What should we call you, for instance when we email you?'
+            .form-group.form-group-bottom
+              = f.label :email, 'Email*'
+              .input-group.input-group-lg
+                = f.text_field :email, class: 'form-control required', placeholder: 'Enter email address', email: true
+          .container
+            .form-group.form-group-bottom
+              %button#submit.btn.btn-lg.btn-custom(type='submit' style='width: 50%;')
+                Submit
+%footer.footer
+  #rj-copyright
+    .container
+      .row
+        .col-md-12
+          %p
+            Copyright &copy; 2015
+            %a{:href => "#"} This Company

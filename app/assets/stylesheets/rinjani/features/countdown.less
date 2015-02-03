@@ -1,0 +1,30 @@
+/* ##### Countdown ##### */
+
+@import "../variables";
+
+.cd-content {
+    .cd-element {
+        border-bottom: 1px solid @base-color;
+        padding-bottom: 15px;
+
+        > .cd-value {
+            color: @base-color;
+            font-size: 40px;
+            font-weight: 300;
+
+            @media(min-width:359px) {
+                font-size: 60px;
+            }
+        }
+
+        > .cd-label {
+            color: #b7ada4;
+            font-size: 20px;
+            font-weight: 300;
+
+            @media(min-width:359px) {
+                font-size: 30px;
+            }
+        }
+    }
+}

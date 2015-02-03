@@ -1,0 +1,8 @@
+# ENVIRONMENT VARIABLES
+DOMAIN: "shoebunnies.com"
+SENDER_EMAIL: "brandon.steve@gmail.com"
+MAILER_DOMAIN: "gmail.com"
+SMTP_SERVER: "smtp.gmail.com"
+SMTP_PORT: "587"
+SMTP_USER: "brandon.steve@gmail.com"
+SMTP_PWD: "pw"

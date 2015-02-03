@@ -1,0 +1,217 @@
+/* ##### Accordion ##### */
+
+@import "../variables";
+
+.accordion {
+    .panel-group {
+        > .panel {
+            border-color: lighten(@base-color, 10%);
+            border-radius: 0px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            
+            > .panel-heading {
+                padding: 0px;
+                background-color: @base-color;
+                border-color: @base-color;
+                border-radius: 0px;
+
+                > .panel-title {
+                    > a {
+                        display: inline-block;
+                        padding: 10px 15px;
+                        width: 100%;
+                        color: #fff;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+
+                    > a.collapsed {
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            > .panel-collapse {
+                > .panel-body {
+                    background-color: #fff;
+                    border-color: lighten(@base-color, 10%);
+
+                    > p {
+                        color: #222;
+                        font-size: 14px;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+
+        .panel+.panel {
+            margin-top: 2px;
+        }
+    }
+}
+
+
+/* ##### Accordion Style One ##### */
+
+.accordion.style-one {
+    .panel-group {
+        > .panel {
+            > .panel-heading {
+                > .panel-title {
+                    > a {
+                        &:after {
+                            position: absolute;
+                            right: 30px;
+                            font-family: FontAwesome;
+                            font-weight: 400;
+                            font-size: 18px;
+                            content: "\f068";
+                            text-decoration: inherit;
+                        }
+                    }
+
+                    > a.collapsed {
+                        &:after {
+                            content: "\f067";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ##### Accordion Style Two ##### */
+
+.accordion.style-two {
+    .panel-group {
+        > .panel {
+            > .panel-heading {
+                > .panel-title {
+                    > a {
+                        padding: 10px 30px;
+
+                        &:before {
+                            position: absolute;
+                            left: 30px;
+                            font-family: FontAwesome;
+                            font-weight: 400;
+                            font-size: 18px;
+                            content: "\f0d7";
+                            text-decoration: inherit;
+                        }
+                    }
+
+                    > a.collapsed {
+                        &:before {
+                            content: "\f0da";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ##### Accordion Style Three ##### */
+
+.accordion.style-three {
+    .panel-group {
+        border-top: 1px solid #222;
+
+        > .panel {
+            border: none;
+            border-bottom: 1px solid #222;
+
+            > .panel-heading {
+                background-color: #fff;
+
+                > .panel-title {
+                    > a {
+                        color: #222;
+                            
+                        &:after {
+                            font-family: FontAwesome;
+                            content: "\f068";
+                            text-decoration: inherit;
+                            font-size: 18px;
+                            position: absolute;
+                            right: 30px;
+                        }
+                    }
+
+                    > a.collapsed {
+                        &:after {
+                            content: "\f067";
+                        }
+                    }
+                }
+            }
+
+            > .panel-collapse {
+                > .panel-body {
+                    border-color: #eee;
+                }
+            }
+        }
+
+        .panel+.panel {
+            margin-top: 0px;
+        }
+    }
+}
+
+
+/* ##### Accordion Style Four ##### */
+
+.accordion.style-four {
+    .panel-group {
+        border-top: 1px solid #222;
+
+        > .panel {
+            border: none;
+            border-bottom: 1px solid #222;
+
+            > .panel-heading {
+                background-color: #fff;
+
+                > .panel-title {
+                    > a {
+                        padding: 10px 30px;
+                        color: #222;
+                            
+                        &:before {
+                            position: absolute;
+                            left: 30px;
+                            font-family: FontAwesome;
+                            font-weight: 400;
+                            font-size: 18px;
+                            content: "\f0d7";
+                            text-decoration: inherit;
+                        }
+                    }
+
+                    > a.collapsed {
+                        &:before {
+                            content: "\f0da";
+                        }
+                    }
+                }
+            }
+
+            > .panel-collapse {
+                > .panel-body {
+                    border-color: #eee;
+                }
+            }
+        }
+
+        .panel+.panel {
+            margin-top: 0px;
+        }
+    }
+}

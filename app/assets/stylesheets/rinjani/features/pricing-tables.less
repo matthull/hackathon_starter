@@ -1,0 +1,347 @@
+/* ##### Pricing Tables ##### */
+
+@import "../variables";
+
+.pricing-table {
+    .pricing-wrapper {
+        > .pricing-column {
+            > .plan-title {
+                display: block;
+                background-color: #1d1d1d;
+                color: #fff;
+
+                > h2 {
+                    display: block;
+                    margin: 0;
+                    height: 74px;
+                    line-height: 74px;
+                    background-color: @base-color;
+                    color: #fff;
+                    font-size: 30px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+
+                > .pricing-box {
+                    padding: 30px;
+                    height: 216px;
+                    border-bottom: 3px solid @base-color;
+
+                    > .price {
+                        position: relative;
+                        display: inline-block;
+                        padding: 0 0 0 10px;
+                        color: #fff;
+                        font-size: 100px;
+                        font-weight: 300;
+                        line-height: 100px;
+
+                        > .symbol {
+                            position: absolute;
+                            top: -25px;
+                            left: 0;
+                            color: #fff;
+                            font-size: 22px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    > .month {
+                        position: relative;
+                        display: inline-block;
+                        bottom: -0px;
+                        left: 0px;
+                        font-size: 14px;
+                        font-weight: normal;
+                        color: #fff;
+                    }
+
+                    > .price-info {
+                        margin-top: 20px;
+                        font-size: 13px;
+                        font-style: italic;
+                        color: #aaa;
+                    }
+                }
+            }
+
+            > .item-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                background-color: #fff;
+
+                > li {
+                    display: block;
+                    padding: 20px 15px;
+                    font-size: 16px;
+                    list-style-type: none;
+                    border-right: 1px solid #e8e8e8;
+                    border-bottom: 1px solid #e8e8e8;
+                    border-left: 1px solid #e8e8e8;
+                }
+            }
+
+            > .plan-footer {
+                background-color: #f6f6f6;
+                padding: 20px 10px;
+                border-right: 1px solid #e8e8e8;
+                border-bottom: 1px solid #e8e8e8;
+                border-left: 1px solid #e8e8e8;
+            }
+        }
+    }
+
+    .pricing-wrapper.not-right-column {
+        margin-bottom: 50px;
+
+        @media(min-width:1023px) {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+/* ##### Pricing Tables Style One ##### */
+
+.pricing-table.style-one {
+    
+}
+
+
+/* ##### Pricing Tables Style Two ##### */
+
+.pricing-table.style-two {
+    .pricing-wrapper {
+        @media(min-width:767px) {
+            padding: 0px;
+            box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+        }
+
+        > .pricing-column {
+            > .item-list {
+                > li {
+                    @media(min-width:767px) {
+                        border-right: none;
+                        border-left: none;
+                    }
+                }
+            }
+
+            > .plan-footer {
+                @media(min-width:767px) {
+                    border-right: none;
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* ##### Pricing Tables Style Three ##### */
+
+.pricing-table.style-three {
+    .pricing-wrapper {
+        @media(min-width:767px) {
+            padding: 0px;
+            box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+        }
+
+        @media(min-width:1023px) {
+            margin-top: 25px;
+        }
+    }
+
+    .pricing-wrapper.recomended {
+        @media(min-width:1023px) {
+            margin-top: 1px;
+        }
+        
+        > .pricing-column {
+            > .item-list {
+                > li {
+                    @media(min-width:767px) {
+                        border-right: none;
+                        border-left: none;
+                    }
+                }
+            }
+
+            > .plan-footer {
+                @media(min-width:767px) {
+                    border-right: none;
+                    border-left: none;
+                }
+
+                @media(min-width:1023px) {
+                    padding: 32px 10px;
+                }
+            }
+        }
+    }
+}
+
+
+/* ##### Pricing Tables Style Four ##### */
+
+.pricing-table.style-four {
+    .pricing-wrapper {
+        @media(min-width:767px) {
+            padding: 0px;
+            box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+        }
+
+        > .pricing-column {
+            > .item-list {
+                > li {
+                    @media(min-width:767px) {
+                        border-right: none;
+                        border-left: none;
+                    }
+
+                    > i {
+                        font-size: 20px;
+                    }
+
+                    > i.fa-check {
+                        color: #7ea95e;
+                    }
+
+                    > i.fa-times {
+                        color: #8d1c31;
+                    }
+                }
+            }
+
+            > .plan-footer {
+                @media(min-width:767px) {
+                    border-right: none;
+                    border-left: none;
+                }
+            }
+        }
+    }
+
+    .pricing-wrapper.features {
+        box-shadow: none;
+
+        > .pricing-column {
+            > .item-list {
+                border-top: 3px solid @base-color;
+                margin-top: 287px;
+                box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+
+/* ##### Pricing Tables Style Five ##### */
+
+.pricing-table.style-five {
+    .pricing-wrapper {
+        > .pricing-column {
+            border-top: 6px solid @base-color;
+            
+            > .plan-title {
+                > h2 {
+                    background-color: #1d1d1d;
+                }
+                
+                > .pricing-box {
+                    height: auto;
+                    padding: 0px 15px 25px 15px
+                }
+            }
+            
+            > .item-list {
+                background-color: #f9f9f9;
+
+                > li {
+                    &:nth-child(odd) {
+                        background-color: #e5e5e5;
+                    }
+                }
+            }
+            
+            > .plan-footer {
+                padding: 0px;
+                background-color: @base-color;
+                border-right: 1px solid darken(@base-color, 2%);
+                border-bottom: 1px solid darken(@base-color, 2%);
+                border-left: 1px solid darken(@base-color, 2%);
+                
+                a.btn {
+                    width: 100%;
+                    padding-top: 18px;
+                    padding-bottom: 18px;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* ##### Pricing Tables Style Six ##### */
+
+.pricing-table.style-six {
+    .pricing-wrapper {
+        @media(min-width:767px) {
+            padding: 0px;
+            box-shadow: 0 0 13px rgba(0, 0, 0, 0.2);
+        }
+
+        > .pricing-column {
+            border-top: 6px solid @base-color;
+            
+            > .plan-title {
+                > h2 {
+                    background-color: #1d1d1d;
+                }
+                
+                > .pricing-box {
+                    height: auto;
+                    padding: 0px 15px 25px 15px
+                }
+            }
+            
+            > .item-list {
+                background-color: #f9f9f9;
+                
+                > li {
+                    @media(min-width:767px) {
+                        border-right: none;
+                        border-left: none;
+                    }
+                    
+                    &:nth-child(odd) {
+                        background-color: #e5e5e5;
+                    }
+                }
+            }
+
+            > .plan-footer {
+                padding: 0px;
+                background-color: @base-color;
+                border-right: 1px solid darken(@base-color, 2%);
+                border-bottom: 1px solid darken(@base-color, 2%);
+                border-left: 1px solid darken(@base-color, 2%);
+                
+                @media(min-width:767px) {
+                    border-right: none;
+                    border-left: none;
+                }
+                
+                a.btn {
+                    width: 100%;
+                    padding-top: 18px;
+                    padding-bottom: 18px;
+                    border: none;
+                }
+            }
+        }
+    }
+}
