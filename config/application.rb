@@ -29,6 +29,9 @@ module ZenWebsite
     # autoload lib path
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
+
+    # Prevent some stuff from being incorrectly annotated by ng-annotate
+    ENV['NG_REGEXP'] = '^$'
     
   end
 end
